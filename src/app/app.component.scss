@@ -1,0 +1,11 @@
+.items_container {
+    display: list-item;
+    column-count: 3;
+}
+
+.maxSizePagination {
+    display: flex;
+    div:nth-child(1) {
+        margin-right: 15px;
+    }
+}

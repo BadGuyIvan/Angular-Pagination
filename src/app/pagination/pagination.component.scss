@@ -1,0 +1,41 @@
+.pagination_container {
+    display: inline-block;
+
+    .page, .prev, .next {
+        color: black;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+        cursor: pointer;
+        &:hover:not(.dots) {
+            color: #ffffff;
+            background-color: #62bad3;
+        }
+    }
+    .dots {
+        color: #999999;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+        cursor: default;
+    }
+
+    .page, .prev, .next, .dots {
+        width: 18px;
+        text-align: center;
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+         -khtml-user-select: none; /* Konqueror HTML */
+           -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+                user-select: none; /* Non-prefixed version, currently*/
+    }
+
+    .active {
+        background-color: #92C5D3;
+        color: #ffffff;
+        &:hover {
+            background-color: #62bad3;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+<div class="pagination_container">
+  <div class="prev" (click)="prevPage()">«</div>
+  <ng-container *ngIf="isLowLimit()">
+    <div class="page" (click)="onFirstPage()">1</div>
+    <div class="dots">...</div>
+  </ng-container>
+  <div class="page" [ngClass]="{'active': page === currentPage}" (click)="onCurrentPage(page)"
+    *ngFor="let page of paginationItems">
+    {{page}}
+  </div>
+  <ng-container *ngIf="isHighLimit()">
+    <div class="dots">...</div>
+    <div class="page" (click)="onLastPage()">{{lastPageText}}</div>
+  </ng-container>
+  <div class="next" (click)="nextPage()">»</div>
+</div>
